@@ -1,0 +1,221 @@
+.ppd {
+    .hidden {
+        display: none;
+    }
+
+    .ppdPopupHTML {
+        position: relative;
+        background: #fff;
+        position: fixed;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 99999;
+        border: 1px solid #cdcdcd;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        // flexbox code
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        a {
+            &.ppdClose {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        }
+
+        button {
+            &.ppdSave {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+
+        .mCont {
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .column {
+                border: 1px solid rgb(193, 193, 193);
+                padding: 5px;
+                display: inline-block;
+                margin-right: 5px;
+                -webkit-align-self: flex-start;
+                -ms-flex-item-align: flex-start;
+                align-self: flex-start;
+
+                &:hover {
+                    background: rgb(255, 213, 213);
+                }
+
+                .delete {
+                    padding: 5px;
+                    background: red;
+                    display: inline-block;
+                    margin: 5px;
+                    color: #FFF;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+
+                    &:hover {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                }
+
+                .row {
+                    padding: 1px 10px;
+                    background: rgb(227, 227, 227);
+                    border: 1px solid rgb(73, 73, 73);
+
+                    &.title {
+                        background: rgb(124, 185, 183);
+                    }
+
+                    &.highlight {
+                        background: rgb(145, 145, 145);
+                    }
+
+                    &.cell{
+                      position: relative;
+                      input{
+
+                        &.editable{
+                          display: none;
+                          position: absolute;
+                          left:0px;
+                          right:0px;
+                          top:0px;
+                          bottom:0px;
+                          min-width:0px;
+                          width:100%;
+                          margin: 0px;
+                        }
+                      }
+                      &:hover{
+                        input{
+                          &.editable{
+                            display: inline-block;
+                          }
+                        }
+                      }
+                    }
+                }
+                //side column
+                &.side {
+                    border: 0 solid red;
+
+                    .title {
+                        min-height: 21px;
+                        background: none;
+                        border: 0 solid red;
+                    }
+
+                    &:hover {
+                        background: none;
+                    }
+
+                    .row {
+                        position: relative;
+
+                        .delete {
+                            padding: 1px;
+                            position: absolute;
+                            top: -6px;
+                            left: -50px;
+                        }
+                    }
+                }
+
+                &.add {
+                    background: none;
+                    border: 0 solid rgb(193, 193, 193);
+
+                    &.br {
+                        margin-top: 20px;
+
+                        .row {
+                            margin-left: -80px;
+                        }
+                    }
+
+                    .row {
+                        background: none;
+                        padding: 10px;
+                        margin: 10px;
+                        border: 0 solid rgb(199, 199, 199);
+                    }
+                }
+            }
+        }
+
+        button {
+            display: block;
+
+            &.addRow {
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                -webkit-align-self: auto;
+                -ms-flex-item-align: auto;
+                align-self: flex-end;
+            }
+        }
+
+        .addStuff {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+    }
+}

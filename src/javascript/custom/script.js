@@ -1,3 +1,4 @@
+console.log('asd');
 //the angular part
 var ppdMod = angular.module('ppdAng', []);
 ppdMod.controller('ppdControler', ['$scope', function($scope) {

@@ -13,9 +13,10 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
         var newGenArr = $scope.grid;
         newGenArr.forEach(function(value, index) {
             value.push('Empty');
+            value.push('Empty');
         });
         $scope.sideColumn.push('Empty Row Description');
-
+        $scope.sideColumn.push('Empty Row Description');
         $scope.grid = newGenArr;
     };
     $scope.deleteRow = function(key) {
